@@ -270,6 +270,52 @@ footer{
   .features{grid-template-columns:1fr}
   .curtain{width:23px}
   main{margin:32px auto}
+}/* TIRAI MERAH ADMIT ONE */
+.curtain-frame {
+  position: relative;
+  isolation: isolate;
+  margin: 35px auto;
+}
+
+.curtain-frame::before,
+.curtain-frame::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  bottom: -12px;
+  width: clamp(22px, 7vw, 55px);
+  z-index: 2;
+  pointer-events: none;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #350006 0px,
+      #79000b 7px,
+      #d51b29 14px,
+      #85000c 22px,
+      #3b0007 30px
+    );
+
+  box-shadow:
+    inset 5px 0 8px #ff596044,
+    inset -7px 0 10px #170000aa,
+    0 5px 12px #0008;
+}
+
+.curtain-frame::before {
+  left: -18px;
+  border-radius: 0 0 18px 35px;
+}
+
+.curtain-frame::after {
+  right: -18px;
+  border-radius: 0 0 35px 18px;
+}
+
+.curtain-frame .upload-card {
+  position: relative;
+  z-index: 1;
 }
 </style>
 </head>
@@ -308,8 +354,8 @@ atau Ell bantu revisi.</p>
     </p>
   </section>
 
-  <section class="upload-card">
-    <div class="ticket-label">
+  <div class="curtain-frame">
+<section class="upload-card">
       ★ ADMIT ONE · DOCUMENT CHECKING ★
     </div>
 
@@ -336,7 +382,7 @@ atau Ell bantu revisi.</p>
       Tenang, dokumenmu tidak akan diubah tanpa izinmu.
     </p>
   </section>
-
+</div>
   <h3 class="section-title">
     ✦ WHAT'S ON THE SCREEN? ✦
   </h3>
