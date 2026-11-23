@@ -281,38 +281,45 @@ footer{
 .curtain-frame::after {
   content: "";
   position: absolute;
-  top: -12px;
-  bottom: -12px;
-  width: clamp(22px, 7vw, 55px);
-  z-index: 2;
+  top: -15px;
+  bottom: -15px;
+  width: clamp(45px, 12vw, 90px);
+  z-index: 3;
   pointer-events: none;
 
   background:
     repeating-linear-gradient(
       90deg,
-      #350006 0px,
-      #79000b 7px,
-      #d51b29 14px,
-      #85000c 22px,
-      #3b0007 30px
+      #360006 0px,
+      #72000b 8px,
+      #c90018 17px,
+      #85000d 25px,
+      #430007 34px
     );
 
   box-shadow:
-    inset 5px 0 8px #ff596044,
-    inset -7px 0 10px #170000aa,
-    0 5px 12px #0008;
+    inset 5px 0 12px #ff777744,
+    inset -8px 0 12px #160000aa,
+    0 5px 15px #0009;
 }
 
 .curtain-frame::before {
   left: -18px;
-  border-radius: 0 0 18px 35px;
+  clip-path: polygon(
+    0 0, 100% 0, 100% 75%,
+    85% 82%, 100% 90%, 75% 100%, 0 100%
+  );
+  border-radius: 0 0 35% 10%;
 }
 
 .curtain-frame::after {
   right: -18px;
-  border-radius: 0 0 35px 18px;
+  clip-path: polygon(
+    0 0, 100% 0, 100% 100%,
+    25% 100%, 0 90%, 15% 82%, 0 75%
+  );
+  border-radius: 0 0 10% 35%;
 }
-
 .curtain-frame .upload-card {
   position: relative;
   z-index: 1;
